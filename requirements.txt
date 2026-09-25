@@ -1,0 +1,21 @@
+# docjuice dependencies
+#
+# Install everything with:
+#     pip install -r requirements.txt
+#
+# On Kali, do this inside a virtual environment (see README.md) -- the system
+# Python is externally managed and a bare `pip install` will be refused.
+
+# The conversion engine. [all] pulls in every format extra (pdf, docx, pptx,
+# xlsx, xls, outlook, audio, youtube). Install a narrower set if you prefer,
+# e.g. markitdown[pdf,docx,pptx] -- docjuice detects what is missing and tells
+# you which extra to add.
+markitdown[all]>=0.1.0
+
+# Progress bar, colour, and formatted summary tables.
+# Optional: without it docjuice falls back to plain text output.
+rich>=13.0
+
+# Mojibake repair in the cleanup pass.
+# Optional: without it encoding damage is detected and reported but not fixed.
+ftfy>=6.0
