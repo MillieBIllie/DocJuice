@@ -1,15 +1,43 @@
-# docjuice
+<p align="center">
+  <img src="assets/mascot.jpg" alt="docjuice mascot: a pixel-art document sipping from a juice box" width="220">
+</p>
 
+<h1 align="center">docjuice</h1>
+
+<p align="center"><b>Documents in, Markdown out.</b></p>
+
+<p align="center">
+  Batch-convert folders and zip archives of documents to Markdown with
+  <a href="https://github.com/microsoft/markitdown">Microsoft MarkItDown</a>,
+  keeping the folder structure, recovering scanned PDFs with local OCR,
+  and scoring every output's quality.
+</p>
+
+---
+
+## What it looks like
+
+Point it at a zip archive, a folder, or a single file:
+
+```bash
+docjuice ~/Documents/Evidence.zip
 ```
-████▄   ▄▄▄   ▄▄▄▄     ▄▄ ▄▄ ▄▄ ▄▄  ▄▄▄▄ ▄▄▄▄▄
-██  ██ ██▀██ ██▀▀▀     ██ ██ ██ ██ ██▀▀▀ ██▄▄
-████▀  ▀███▀ ▀████   ▄▄█▀ ▀███▀ ██ ▀████ ██▄▄▄
-  documents in, markdown out
-```
 
-Batch-convert documents to Markdown using [Microsoft MarkItDown](https://github.com/microsoft/markitdown), preserving your folder structure.
+It shows what it found and asks before doing anything, then converts every document with a live progress bar and finishes with a summary of what worked, what didn't, and why:
 
-Point it at a zip archive, a folder, or a single file. It finds every convertible document — recursing through nested folders — converts each one, cleans up the resulting Markdown, scores its quality, and writes everything into a new folder that mirrors the original tree exactly.
+<p align="center">
+  <img src="assets/screenshot-run.jpg" alt="docjuice converting a zip archive: pre-flight scan, progress bar, summary with quality scores and OCR results" width="820">
+</p>
+
+And this is what greets you in the terminal:
+
+<p align="center">
+  <img src="assets/screenshot-banner.jpg" alt="docjuice terminal banner: the pixel-art mascot above the orange DOC JUICE wordmark" width="380">
+</p>
+
+## What it does
+
+It finds every convertible document — recursing through nested folders — converts each one with MarkItDown, cleans up the resulting Markdown, scores its quality, and writes everything into a new folder that mirrors the original tree exactly:
 
 ```
 contracts/                     contracts_markdown/
@@ -458,6 +486,7 @@ logo.py          the colour logo (optional -- the tool runs without it)
 validate.py      input validation + output quality scoring
 clean.py         markdown cleanup rules
 requirements.txt Python dependencies
+assets/          images used by this README
 ```
 
 All of these must sit in the same folder.
