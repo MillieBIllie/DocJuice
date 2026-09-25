@@ -54,12 +54,6 @@ contracts/                     contracts_markdown/
 
 ---
 
-## The logo
-
-`docjuice --version`, `docjuice --doctor`, a bare `docjuice` and the installer show the full-colour logo with the text wordmark underneath. Conversion runs show just the compact wordmark, so the logo doesn't push the scan results off screen. `--banner full` (or `export DOCJUICE_BANNER=full`) shows the full logo on every run; `--banner none` hides it.
-
-The logo was drawn for a light background, so its dark ink would vanish on a dark terminal. By default docjuice inverts the neutral tones (dark ink becomes light) and leaves the oranges alone. On a light terminal, set `DOCJUICE_BG=light` to see the original colours. If the terminal is too narrow for the logo, has fewer than 256 colours, or output is piped, docjuice falls back to the wordmark.
-
 ## Install
 
 ```bash
